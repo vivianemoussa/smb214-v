@@ -18,24 +18,33 @@ and open the template in the editor.
   font-weight: bold;
 
   }
- #id_btn1{
+ #id_btn1,button{
      clear: both;
      
 	  font-weight: bold;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+        float: right;
 	border-right-style: double;
 	border-bottom-style: double;
 	border-left-style: double;
         text-align: center;
+         padding: 20px 20px 20px 20px;
+        display: block;
      
   }
+#currentreleases { 
+    width: 919px;
+    padding: 20px 402px 20px 309px;
+}
   #div3,#div4,#div5,#div6,#div7{
-      width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-  }
+     width: 200px; 
+     padding: 5px; 
+     margin-left: 5px;
+     border: 1px solid #D7D7D7;
+     display: inline;
+     font-size: 12px;
+     float:left; }
+
+
          </style>
       
 
@@ -43,14 +52,17 @@ and open the template in the editor.
 <body>
    <h1><b>Welcome to JQuery</b></h1>
    <br/>
-   <div id="div3" style="width:80px;height:80px;display:none;background-color:red;text-align: center;font-weight: bold;font-size: 75px;">H</div><br>
+   <button id="id_btn1" >Click To JQuery Page</button>
+<p></p>
+<br>
+
+  <div id="currentreleases">
+   <div id="div3"  style="width:80px;height:80px;display:none;background-color:red;text-align: center;font-weight: bold;font-size: 75px;">H</div><br>
 <div id="div4" style="width:80px;height:80px;display:none;background-color:green;text-align: center;font-weight: bold;font-size: 75px;">E</div><br>
 <div id="div5" style="width:80px;height:80px;display:none;background-color:blue;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>    
 <div id="div6" style="width:80px;height:80px;display:none;background-color:brown;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>
 <div id="div7" style="width:80px;height:80px;display:none;background-color:purple;text-align: center;font-weight: bold;font-size: 75px;">O</div><br>
-   <button id="id_btn1" >Click To JQuery Page</button>
-<p></p>
-<br>
+</div>   
 <button>Click to fade in boxes</button>
 <br><br>
 

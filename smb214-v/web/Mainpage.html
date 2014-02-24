@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+         <meta charset="UTF-8">
+        <title>Welcome to Jquery</title>
+          <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+         <style>
+  h1 {
+    color: red;
+    margin: 5px;
+    font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+
+  }
+ #id_btn1{
+     clear: both;
+     
+	  font-weight: bold;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-style: double;
+	border-bottom-style: double;
+	border-left-style: double;
+        text-align: center;
+     
+  }
+  #div3,#div4,#div5,#div6,#div7{
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+         </style>
+      
+
+</head>
+<body>
+   <h1><b>Welcome to JQuery</b></h1>
+   <br/>
+   <div id="div3" style="width:80px;height:80px;display:none;background-color:red;text-align: center;font-weight: bold;font-size: 75px;">H</div><br>
+<div id="div4" style="width:80px;height:80px;display:none;background-color:green;text-align: center;font-weight: bold;font-size: 75px;">E</div><br>
+<div id="div5" style="width:80px;height:80px;display:none;background-color:blue;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>    
+<div id="div6" style="width:80px;height:80px;display:none;background-color:brown;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>
+<div id="div7" style="width:80px;height:80px;display:none;background-color:purple;text-align: center;font-weight: bold;font-size: 75px;">O</div><br>
+   <button id="id_btn1" >Click To JQuery Page</button>
+<p></p>
+<br>
+<button>Click to fade in boxes</button>
+<br><br>
+
+
+
+
+<script >
+        $(document).ready(function(){
+            $('#id_btn1').click(function(){           
+                 $( "p" ).html( "<b><h1>Welcome to JQuery</h1></b> ");
+                          });
+ $("button").click(function(){
+    $("#div3").fadeIn(1000);
+    $("#div4").fadeIn(1200);
+    $("#div5").fadeIn(2000);
+    $("#div6").fadeIn(2200);
+    $("#div7").fadeIn(2300);
+    $("#div8").fadeIn(2500);
+  });
+        });
+</script>
+</body>
+</html>
+
+ 

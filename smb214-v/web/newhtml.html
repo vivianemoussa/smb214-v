@@ -1,16 +1,157 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>val demo</title>
+  <style>
+    #p1 {
+        color: red;
+        margin: 4px;
+        text-align:center;
+        font-size: 15px;
+    }
+
+  /*  .txt{
+    	float: right;
+	padding-right: 1px;
+	font-size: 14px;
+	color: black;
+	font-family: Times new roman, Helvetica, sans-serif;
+	font-weight: bold;
+	
+	text-align: center;
+	clear: right;
+    }  <p id="p3" class="txt"></p></div>*/
+     b{
+    color: blue;
+    }
+     #id_btn{
+        padding:5px;
+        position:absolute;
+        text-align:center;
+        background-color:#e5eecc;
+        border:solid 1px #c3c3c3;
+
+    }
+    #div2{
+        float: right;
+	padding-right: 1px;
+	font-size: 14px;
+	color: black;
+	font-family: Times new roman, Helvetica, sans-serif;
+	font-weight: bold;
+	
+	text-align: center;
+	clear: right;  
+    }
+
+  </style>
+    
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+  
+</head>
+
+<body>
+    
+ <div id="div2"  >
+ </div>
+    
+ <p id="p1"></p>
+ 
+
+  
+<select id="single">
+    <option>Single</option>
+    <option>Single2</option>
+</select>
+ 
+<select id="multiple" multiple="multiple">
+    <option selected="selected">Multiple</option>
+    <option>Multiple2</option>
+    <option selected="selected">Multiple3</option>
+</select><br></br>
+ 
+<button>Toggle</button>
+
+<br></br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"> </div>
+<br></br>
+
+<button id="id_btn">Click to fade in/out boxes</button> 
+ 
+<br></br>
+
+<h3>Calculate Sum of Two Numbers:</h3>
+    A: <input type="text"  id="id_a" numericOnly:true > <br>
+    B: <input type="text" id="id_b" > <br>
+    <button id="sum">SUM</button> 
+       <br>
+    Result: <input type="text" name="sum1" id="id_sum" readonly/>    
+       <br>
+
+<input type="checkbox" name="checkboxname" value="check1" > check1
+<input type="checkbox" name="checkboxname" value="check2"> check2
+<input type="radio" name="r" value="radio1"> radio1
+<input type="radio" name="r" value="radio2"> radio2
+
+
+
+
+<script type="text/javascript">
+
+
+
+//Appel de file.jsp pour l'apparition de la date
+$.get('get_server_time.jsp',null,function(resp){
+     $("#div2").html("<b >Get Server Time</b><br><u>"+resp+"</u>");
+    });
+
+//Display des valeurs dans la phrase
+function displayVals() {
+  var singleValues = $( "#single" ).val();
+  var multipleValues = $( "#multiple" ).val() || [];
+  $( '#p1' ).html( "<b>Single:</b> " +  singleValues +
+    " <b>Multiple:</b> " + multipleValues.join( ", " ) );
+   }
+
+$( "select" ).change( displayVals );
+displayVals();
+
+$(document).ready(function(){
+
+//Attention    
+ alert("Hello Friend! Welcome to JQuery.");
+
+//Hide and Show La Phrase
+   $("button").click(function(){     
+    $('#p1').toggle();
+    });
+
+//Hide and Show Square        
+  $('#id_btn').click(function(){
+     $("#div1").fadeOut();
+            });
+            
+/*var check=$("#id_a").val();
+if(jQuery.isNumeric(check)== false){
+    alert("Please enter number");
+    $("#id_b").focus();
+    return;
+}*/
+//Somme des 2 nombres            
+  $('#sum').click(function(){
+      var a= parseInt($("#id_a").val());
+     var b= parseInt($("#id_b").val());
+     var r=a+b;
+     alert("a+b= "+r);
+     $("#id_sum").val(r); //set value to text field
+      });
+
+
+});
+  
+
+</script>
+</body>
 </html>

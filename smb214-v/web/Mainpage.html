@@ -13,23 +13,30 @@ and open the template in the editor.
 
          <style>
   h1 {
-    color: red;
-    margin: 5px;
-    font-size: 100px;
+  color: red;
+  margin: 5px;
+  font-size: 100px;
   text-align: center;
   font-weight: bold;
+  border-style: double;  
 
   }
- #id_btn1,button{
-     clear: both;
-     
-	  font-weight: bold;
+  b{
+     border-style: double;   
+     text-align: center;
+     margin-left: 450px;     
+     font-size: 25px;
+     font-weight: bold;
+  }
+ #id_btn1{
+        clear: both;
+   	font-weight: bold;
         float: right;
 	border-right-style: double;
 	border-bottom-style: double;
 	border-left-style: double;
         text-align: center;
-         padding: 20px 20px 20px 20px;
+        padding: 20px 20px 20px 20px;
         display: block;
      
   }
@@ -47,18 +54,18 @@ and open the template in the editor.
      float:left; }
 
 	
-	
+	    ul {list-style-type: none}
 	    img {padding-right: 5px;
                  float:left}
 	
-	  
+	    #infolist {width:500px}
 
 
          </style>
          
 </head>
 <body>
-   <h1><b>Welcome to JQuery</b></h1>
+   <h1>Welcome to JQuery</h1>
      <br/>
    <button id="id_btn1" >Click To JQuery Page</button>
 <p></p>
@@ -71,11 +78,79 @@ and open the template in the editor.
 <div id="div6" style="width:80px;height:80px;display:none;background-color:brown;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>
 <div id="div7" style="width:80px;height:80px;display:none;background-color:purple;text-align: center;font-weight: bold;font-size: 75px;">O</div><br>
 </div>   
-<button>Click to fade in boxes</button>
+
 <br><br>
+<a href="newhtml.html"><b>Click to fade in boxes</b></a>
 
-
+	<div id="infolist">
 	
+	    <h3><a href="#">Viviane Moussa</a></h3>
+	    <div>
+                
+	        <ul>
+	            <li><h4>Vice President</h4></li>
+	            <li><b>phone:</b> x8234</li>
+	            <li><b>office:</b> 102 Bldg 1</li>
+	            <li><b>email:</b> vivo.moussa@hotmail.com</li>
+	        </ul>
+	        <br clear="all">
+	    </div>
+	
+	    <h3><a href="#">John Matthews</a></h3>
+	    <div>
+	        <img src="pix/johnmatthews.jpg" alt="John Matthews">
+	        <ul>
+	            <li><h4>Middle Manager</h4></li>
+	            <li><b>phone:</b> x3082</li>
+	            <li><b>office:</b> 307 Bldg 1</li>
+	            <li><b>email:</b> 
+	
+	j.matthews@company.com
+	&#106;&#46;&#109;&#97;&#116;&#116;&#104;&#101;&#119;&#115;
+	&#x40;
+	&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;
+	</li>
+	        </ul>
+	        <br clear="all">
+	    </div>
+	
+	    <h3><a href="#">Sam Jackson</a></h3>
+	    <div>
+	        <img src="pix/samjackson.jpg" alt="Sam Jackson">
+	        <ul>
+	            <li><h4>Deputy Assistant</h4></li>
+	            <li><b>phone:</b> x3494</li>
+	            <li><b>office:</b> 457 Bldg 2</li>
+	            <li><b>email:</b> 
+	
+	s.jackson@company.com
+	&#115;&#46;&#106;&#97;&#99;&#107;&#115;&#111;&#110;
+	&#x40;
+	&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;
+	</li>
+	        </ul>
+	        <br clear="all">
+	    </div>
+	
+	    <h3><a href="#">Jennifer Brooks</a></h3>
+	    <div>
+	        <img src="pix/jeniferapplethwaite.jpg" alt="Jenifer Applethwaite">
+	        <ul>
+	            <li><h4>Senior Technician</h4></li>
+	            <li><b>phone:</b> x9430</li>
+	            <li><b>office:</b> 327 Bldg 2</li>
+	            <li><b>email:</b> 
+	
+	j.brooks@company.com
+	&#106;&#46;&#98;&#114;&#111;&#111;&#107;&#115;
+	&#x40;
+	&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;
+	</li>
+	        </ul>
+	        <br clear="all">
+	    </div>
+</div>
+
 
 
 
@@ -86,7 +161,8 @@ and open the template in the editor.
             $('#id_btn1').click(function(){           
                  $( "p" ).html( "<b><h1>Welcome to JQuery</h1></b> ");
                           });
- $("button").click(function(){
+ $("#id_btn1").click(function(){
+     
     $("#div3").fadeIn(1000);
     $("#div4").fadeIn(1200);
     $("#div5").fadeIn(2000);

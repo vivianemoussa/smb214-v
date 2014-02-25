@@ -83,8 +83,10 @@
 <br></br>
 
 <h3>Calculate Sum of Two Numbers:</h3>
-    A: <input type="text"  id="id_a" numericOnly:true > <br>
-    B: <input type="text" id="id_b" > <br>
+
+
+    A: <input type="text"  id="id_a" onkeypress="return isNumberKey(event)" > <br>
+    B: <input type="text" id="id_b" onkeypress="return isNumberKey(event)" > <br>
     <button id="sum">SUM</button> 
        <br>
     Result: <input type="text" name="sum1" id="id_sum" readonly/>    
@@ -99,7 +101,16 @@
 
 
 <script type="text/javascript">
-
+function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : event.keyCode
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57)){
+        alert("Please enter only numbers");
+             return false;}
+ 
+          return true;
+       }
 
 
 //Appel de file.jsp pour l'apparition de la date
@@ -148,7 +159,7 @@ if(jQuery.isNumeric(check)== false){
      $("#id_sum").val(r); //set value to text field
       });
 
-
+  
 });
   
 

@@ -9,6 +9,8 @@ and open the template in the editor.
          <meta charset="UTF-8">
         <title>Welcome to Jquery</title>
           <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+
          <style>
   h1 {
     color: red;
@@ -33,7 +35,7 @@ and open the template in the editor.
   }
 #currentreleases { 
     width: 919px;
-    padding: 20px 402px 20px 309px;
+    padding: 20px 42px 200px 309px;
 }
   #div3,#div4,#div5,#div6,#div7{
      width: 200px; 
@@ -44,18 +46,24 @@ and open the template in the editor.
      font-size: 12px;
      float:left; }
 
+	
+	
+	    img {padding-right: 5px;
+                 float:left}
+	
+	  
+
 
          </style>
-      
-
+         
 </head>
 <body>
    <h1><b>Welcome to JQuery</b></h1>
-   <br/>
+     <br/>
    <button id="id_btn1" >Click To JQuery Page</button>
 <p></p>
 <br>
-
+ <img src="pix/jquery.png" alt="Mary Adams" width="250" height="250" />
   <div id="currentreleases">
    <div id="div3"  style="width:80px;height:80px;display:none;background-color:red;text-align: center;font-weight: bold;font-size: 75px;">H</div><br>
 <div id="div4" style="width:80px;height:80px;display:none;background-color:green;text-align: center;font-weight: bold;font-size: 75px;">E</div><br>
@@ -67,9 +75,13 @@ and open the template in the editor.
 <br><br>
 
 
+	
+
+
 
 
 <script >
+
         $(document).ready(function(){
             $('#id_btn1').click(function(){           
                  $( "p" ).html( "<b><h1>Welcome to JQuery</h1></b> ");

@@ -9,18 +9,19 @@ and open the template in the editor.
          <meta charset="UTF-8">
         <title>Welcome to Jquery</title>
           <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-
-
-         <style>
+<style>
+    
   h1 {
   color: red;
-  margin: 5px;
-  font-size: 100px;
+
+  font-size: 80px;
   text-align: center;
   font-weight: bold;
-  border-style: double;  
+  border-style: dashed; 
+ 
 
   }
+  
   b{
      border-style: double;   
      text-align: center;
@@ -28,22 +29,25 @@ and open the template in the editor.
      font-size: 25px;
      font-weight: bold;
   }
+  
+  
+  
  #id_btn1{
-        clear: both;
+       
    	font-weight: bold;
-        float: right;
-	border-right-style: double;
-	border-bottom-style: double;
-	border-left-style: double;
-        text-align: center;
-        padding: 20px 20px 20px 20px;
-        display: block;
      
-  }
+	font-family: Times new roman, Helvetica, sans-serif;
+        text-align:center;
+        padding: 10px 10px 10px 10px;
+        font-size: 16px;
+        
+   }
+   
 #currentreleases { 
     width: 919px;
     padding: 20px 42px 200px 309px;
 }
+
   #div3,#div4,#div5,#div6,#div7{
      width: 200px; 
      padding: 5px; 
@@ -51,23 +55,32 @@ and open the template in the editor.
      border: 1px solid #D7D7D7;
      display: inline;
      font-size: 12px;
-     float:left; }
+     float:left;
+  }
 
-	
-	    ul {list-style-type: none}
-	    img {padding-right: 5px;
-                 float:left}
-	
-	    #infolist {width:500px}
+   ul {
+    list-style-type: none
+   }
+
+   img {
+     padding-right: 5px;
+     float:left;
+}
+
+#infolist {
+     width:500px
+}
 
 
          </style>
          
 </head>
 <body>
+           
    <h1>Welcome to JQuery</h1>
      <br/>
-   <button id="id_btn1" >Click To JQuery Page</button>
+  
+<button id="id_btn1">Click To JQuery</button>
 <p></p>
 <br>
  <img src="pix/jquery.png" alt="Mary Adams" width="250" height="250" />
@@ -155,14 +168,12 @@ and open the template in the editor.
 
 
 
-<script >
-
-        $(document).ready(function(){
-            $('#id_btn1').click(function(){           
-                 $( "p" ).html( "<b><h1>Welcome to JQuery</h1></b> ");
+<script  >
+$(document).ready(function (){
+        $('#id_btn1').click(function (){
+           $( "p" ).html( "<b><h1>Welcome to JQuery</h1></b> ");
                           });
- $("#id_btn1").click(function(){
-     
+ $("button").click(function(){
     $("#div3").fadeIn(1000);
     $("#div4").fadeIn(1200);
     $("#div5").fadeIn(2000);

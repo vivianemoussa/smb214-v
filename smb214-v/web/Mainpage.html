@@ -18,9 +18,13 @@ and open the template in the editor.
   text-align: center;
   font-weight: bold;
   border-style: dashed; 
- 
+   }
+   d{  color: red;
 
-  }
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-style: dashed;}
   
   b{
      border-style: double;   
@@ -44,6 +48,7 @@ and open the template in the editor.
    }
    
 #currentreleases { 
+    margin-left: 100px;
     width: 919px;
     padding: 20px 42px 200px 309px;
 }
@@ -84,7 +89,9 @@ and open the template in the editor.
 <p></p>
 <br>
  <img src="pix/jquery.png" alt="Mary Adams" width="250" height="250" />
+  
   <div id="currentreleases">
+     
    <div id="div3"  style="width:80px;height:80px;display:none;background-color:red;text-align: center;font-weight: bold;font-size: 75px;">H</div><br>
 <div id="div4" style="width:80px;height:80px;display:none;background-color:green;text-align: center;font-weight: bold;font-size: 75px;">E</div><br>
 <div id="div5" style="width:80px;height:80px;display:none;background-color:blue;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>    
@@ -170,10 +177,11 @@ and open the template in the editor.
 
 <script  >
 $(document).ready(function (){
-        $('#id_btn1').click(function (){
-           $( "p" ).html( "<b><h1>Welcome to JQuery</h1></b> ");
-                          });
+        /*$('#id_btn1').click(function (){
+           $( "p" ).html( "<d>Write Less,Do More</d> ");
+                          });*/
  $("button").click(function(){
+    $("#divwrite").fadeIn(1000); 
     $("#div3").fadeIn(1000);
     $("#div4").fadeIn(1200);
     $("#div5").fadeIn(2000);

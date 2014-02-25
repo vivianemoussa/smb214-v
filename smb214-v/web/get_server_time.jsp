@@ -1,10 +1,15 @@
 <%-- 
     Document   : get_server_time
-    Created on : Feb 24, 2014, 2:57:22 PM
+    Created on : Feb 21, 2014, 3:42:49 PM
     Author     : ChVivo
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page  import="java.util.*" %>
+<%                
+ Date d=new Date(); //Create date object
+ out.println(d);   //send date to browser 
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +17,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1></h1>
     </body>
 </html>
+

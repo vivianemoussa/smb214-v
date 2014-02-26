@@ -12,8 +12,8 @@
     }
 
 
-     b{
-    color: blue;
+     #A,B,#result{
+    color: #CC0066;
     }
      #id_btn{
         padding:5px;
@@ -36,12 +36,14 @@
     }
     
     #blink2,#blink1{
-        width: 300px;
-        font-size: 24px;
+        width: 400px;
+        font-size: 22px;
         font-weight: bold;
-        margin-left:430px;
+       // margin-left:430px;
         text-align: center;
+        color: black;
     }
+    
     #id1,#id2{
         background-color:#e5eecc;
    	font-weight: bold;
@@ -56,6 +58,7 @@
         border-color: black;
         
     }
+    
 
   </style>
     
@@ -91,31 +94,32 @@
 <br>
 <button id="id_btn">Click to fade in/out boxes</button> 
  
-<br>
+<br><br>
+<div id="divsum" style="position: relative;width: 500px;left: 480px">
+<h3><u>Calculate Sum of Two Numbers:</u></h3>
 
-<h3>Calculate Sum of Two Numbers:</h3>
 
-
-    A: <input type="text"  id="id_a" onkeypress="return isNumberKey(event)" > <br>
-    B: <input type="text" id="id_b" onkeypress="return isNumberKey(event)" > <br>
-    <button id="sum">SUM</button> 
+<b id="A"> A: </b><input type="text"  id="id_a" onkeypress="return isNumberKey(event)" > <br>
+<b id="B"> B:</b> <input type="text" id="id_b" onkeypress="return isNumberKey(event)" > <br>
+    <br><button id="sum">SUM</button> 
        <br>
-    Result: <input type="text" name="sum1" id="id_sum" readonly/>    
-       <br>
+       <b id="result">Result: </b><input type="text" name="sum1" id="id_sum" readonly>    
+       <br/><br/>
+<b id="blink1">This Font Is Blinking</b><br/><br/>
+<b id="blink2">Color Change With Blink </b>
+</div>
 
+
+<br/><br/>
+
+<br/>
+<input type="button" id="id1" name="blinkFont" value="Blink Font" onClick="blinkFont()">
+<input type="button" id="id2" name="blinkColor" value="Blink Color" onClick="blinkColor()">
+<br/><br/>
 <input type="checkbox" name="checkboxname" value="check1" > check1
 <input type="checkbox" name="checkboxname" value="check2"> check2
 <input type="radio" name="r" value="radio1"> radio1
 <input type="radio" name="r" value="radio2"> radio2
-
-<br><br><br><br>
-<div id="blink1" >This Font Is Blinking</div><br><br>
-<div id="blink2" >Color Change With Blink </div>
-<br>
-<input type="button" id="id1" name="blinkFont" value="Blink Font" onClick="blinkFont()">
-<input type="button" id="id2" name="blinkColor" value="Blink Color" onClick="blinkColor()">
-
-
 
 <script type="text/javascript">
 function isNumberKey(evt)
@@ -173,7 +177,9 @@ if(jQuery.isNumeric(check)== false){
      var b= parseInt($("#id_b").val());
      var r=a+b;
      alert("a+b= "+r);
-     $("#id_sum").val(r); //set value to text field
+     $("#id_sum").val(r);
+     
+     //set value to text field
       });
 
   

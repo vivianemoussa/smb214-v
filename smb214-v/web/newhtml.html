@@ -35,7 +35,26 @@
 	clear: right;  
     }
     
-   
+    #blink2,#blink1{
+        width: 300px;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left:400px;
+    }
+    #id1,#id2{
+        background-color:#e5eecc;
+   	font-weight: bold;
+        margin-left: 300px;
+       margin-top: 50px;
+	font-family: verdana, Helvetica, sans-serif;
+        text-align:center;
+        padding: 10px 10px 10px 10px;
+        font-size: 20px;
+        color:red;
+        border-style: double;
+        border-color: black;
+        
+    }
 
   </style>
     
@@ -88,12 +107,12 @@
 <input type="radio" name="r" value="radio1"> radio1
 <input type="radio" name="r" value="radio2"> radio2
 
-
-<div id="blink1" >This font is blinking</div>
+<br><br><br><br>
+<div id="blink1" >This font is blinking</div><br><br>
 <div id="blink2" >Color change with blink </div>
 <br>
-<input type="button" name="blinkFont" value="Blink Font" onClick="blinkFont()">
-<input type="button" name="blinkColor" value="Blink Color" onClick="blinkColor()">
+<input type="button" id="id1" name="blinkFont" value="Blink Font" onClick="blinkFont()">
+<input type="button" id="id2" name="blinkColor" value="Blink Color" onClick="blinkColor()">
 
 
 
@@ -168,7 +187,7 @@ function blinkFont()
 
 function setblinkFont()
 {
-  document.getElementById("blink1").style.color=""
+  document.getElementById("blink1").style.color="#FF00FF"
   setTimeout("blinkFont()",1000)
 }
 

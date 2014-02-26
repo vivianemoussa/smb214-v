@@ -34,6 +34,8 @@
 	text-align: center;
 	clear: right;  
     }
+    
+   
 
   </style>
     
@@ -87,6 +89,12 @@
 <input type="radio" name="r" value="radio2"> radio2
 
 
+<div id="blink1">This font is blinking</div>
+<div id="blink2" >Color change with blink </div>
+<br>
+<input type="button" name="blinkFont" value="Blink Font" onClick="blinkFont()">
+<input type="button" name="blinkColor" value="Blink Color" onClick="blinkColor()">
+
 
 
 <script type="text/javascript">
@@ -120,7 +128,7 @@ displayVals();
 
 $(document).ready(function(){
 
-//Attention    
+//Attention 
  alert("Hello Friend! Welcome to JQuery.");
 
 //Hide and Show La Phrase
@@ -151,6 +159,33 @@ if(jQuery.isNumeric(check)== false){
   
 });
   
+
+function blinkFont()
+{
+  document.getElementById("blink1").style.color="red"
+  setTimeout("setblinkFont()",1000)
+}
+
+function setblinkFont()
+{
+  document.getElementById("blink1").style.color=""
+  setTimeout("blinkFont()",1000)
+}
+
+
+function blinkColor()
+{
+  document.getElementById("blink2").style.background="red"
+  setTimeout("setblinkColor()",800)
+}
+
+function setblinkColor()
+{
+  document.getElementById("blink2").style.background="green"
+  setTimeout("blinkColor()",800)
+}
+
+
 
 </script>
 </body>

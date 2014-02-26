@@ -13,20 +13,31 @@ and open the template in the editor.
     
   h1 {
   color: red;
-
-  font-size: 80px;
+  background-position:  center;
+background-image: url('pix/JQuery logo.png');
   text-align: center;
-  font-weight: bold;
   border-style: dashed; 
+  height:  100px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size:60%;
+  background-color: #00CC33;
+  margin-left:  1000px;
+margin-top: 200px;
    }
   
   b{
-     border-style: double;   
-     text-align: center;
-     margin-left: 450px;     
-     font-size: 25px;
-     font-weight: bold;
-     color: green
+ background-color:#e5eecc;
+   	font-weight: bold;
+        margin-left: 450px;
+        margin-top: 50px;
+	font-family: verdana, Helvetica, sans-serif;
+        text-align:center;
+        padding: 20px 20px 20px 20px;
+        font-size: 20px;
+        color:red;
+        border-style: double;
+        border-color: black;
   }
   
   
@@ -34,29 +45,34 @@ and open the template in the editor.
  #id_btn1{
        background-color:#e5eecc;
    	font-weight: bold;
-        margin-left: 500px;
-	font-family: Times new roman, Helvetica, sans-serif;
+        margin-left: 800px;
+        margin-top: 50px;
+	font-family: verdana, Helvetica, sans-serif;
         text-align:center;
-        padding: 10px 10px 10px 10px;
-        font-size: 16px;
+        padding: 20px 20px 20px 20px;
+        font-size: 20px;
+        color:red;
+        border-style: double;
+        border-color: black;
         
    }
    
 #currentreleases { 
-    margin-left: 110px;
+    margin-left: 120px;
     width: 919px;
     padding: 20px 42px 200px 309px;
 }
 
   #div3,#div4,#div5,#div6,#div7{
-      
-     width: 200px; 
-     padding: 5px; 
+      width:80px;height:80px;
+      display:none;
+      padding: 5px; 
      margin-left: 5px;
      border: 1px solid #D7D7D7;
-     display: inline;
+   
      font-size: 12px;
      float:left;
+     text-align: center;font-weight: bold;font-size: 75px;
   }
 
    ul {
@@ -77,30 +93,32 @@ and open the template in the editor.
          </style>
          
 </head>
-<body>
-           
-   <h1>Welcome to JQuery</h1>
- 
-<button id="id_btn1">Click Here</button>
+<body style="background-color: #F5F5DC;">
+    
+<u> <strong style="color: red;font-size: 80px; margin-left: 300px">Welcome to JQuery   </strong></u>  <br><br><br><br>
+    <img src="pix/modal jquery.png" >
+    <h1></h1>
+    
+<button id="id_btn1">Please,Click Here!!!!!</button>
 <p></p>
 <br><br><br><br>
  <img src="pix/jquery.png" alt="Mary Adams" width="250" height="250" />
-  <div id="divwrite"  style=" margin-left:310px;width:700px;height:80px;color: white;display:none;background-color:green;text-align: center;font-weight: bold;font-size: 50px;">WRITE LESS, DO MORE</div><br>
+  <div id="divwrite"  style=" margin-left:350px;width:700px;height:80px;color: white;display:none;background-color:green;text-align: center;font-weight: bold;font-size: 50px;">WRITE LESS, DO MORE</div><br>
   <div id="currentreleases">
      
-   <div id="div3"  style="width:80px;height:80px;display:none;background-color:red;text-align: center;font-weight: bold;font-size: 75px;">H</div><br>
-<div id="div4" style="width:80px;height:80px;display:none;background-color:green;text-align: center;font-weight: bold;font-size: 75px;">E</div><br>
-<div id="div5" style="width:80px;height:80px;display:none;background-color:blue;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>    
-<div id="div6" style="width:80px;height:80px;display:none;background-color:brown;text-align: center;font-weight: bold;font-size: 75px;">L</div><br>
-<div id="div7" style="width:80px;height:80px;display:none;background-color:purple;text-align: center;font-weight: bold;font-size: 75px;">O</div><br>
+   <div id="div3"  style="background-color:red;">H</div><br>
+<div id="div4" style="background-color:green;">E</div><br>
+<div id="div5" style="background-color:blue;">L</div><br>    
+<div id="div6" style="background-color:brown;">L</div><br>
+<div id="div7" style="background-color:purple;">O</div><br>
 </div>   
 
 <br><br>
-<a href="newhtml.html" style="color: green"><b>Click to Go Another </b></a><br><br>
+<a href="newhtml.html" style="color: green;"><b>Click to Go Another </b></a><br><br>
 
 	<div id="infolist">
 	
-            <h3><a href="#">Viviane Moussa</a></h3>
+            <h3><a href="#" style="color: #990033">Viviane Moussa</a></h3>
 	    <div>
                 
 	        <ul>
@@ -122,7 +140,7 @@ $(document).ready(function (){
            $( "p" ).html( "<d>Write Less,Do More</d> ");
                           });*/
  $("button").click(function(){
-    $("#divwrite").fadeIn(1000); 
+    $("#divwrite").fadeIn(4000); 
     $("#div3").fadeIn(1000);
     $("#div4").fadeIn(1200);
     $("#div5").fadeIn(2000);

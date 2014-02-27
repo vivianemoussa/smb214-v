@@ -68,14 +68,15 @@
 </head>
 
 <body style="background-color: #F5F5DC;">
-
- <div id="div2"  >
+ 
+ <div id="div2">
  </div>
     
- <p id="p1"></p>
- 
+ <div id="container" style="width:1000px">
+<div id="header" style="background-color:#FFA500;">
+<h1 id="p1" style="margin-bottom:0;"></h1></div>
 
-  
+ <div id="menu" style="background-color:#FFCC00;height:500px;width:200px;float:left;">  
 <select id="single">
     <option>Single</option>
     <option>Single2</option>
@@ -94,33 +95,32 @@
 <div id="div1" style="width:80px;height:80px;background-color:red;"> </div>
 <br>
 <button id="id_btn">Click to fade in/out boxes</button> 
- 
+
 <br><br>
-<div id="divsum" style="position: relative;width: 500px;left: 480px">
-<h3><u>Calculate Sum of Two Numbers:</u></h3>
+</div>
+ <div id="content" style="background-color:#EEEEEE;height:500px;width:800px;float:left;text-align: center">
+<br>
+<h3><u>Calculate Sum And Product of Two Numbers:</u></h3>
 
 
 <b id="A"> A: </b><input type="text"  id="id_a" onkeypress="return isNumberKey(event)" > <br>
 <b id="B"> B:</b> <input type="text" id="id_b" onkeypress="return isNumberKey(event)" > <br>
-    <br><input type="button" id="id1" name="SUM et PRODUIT" value="SUM et PRODUIT" onClick="blinkFont()">
+    <br><input type="button" id="id1" name="SUM & PRODUCT" value="SUM & PRODUCT" onClick="blinkFont()">
        <br><br>
        <u>  <b id="result">Result: </b> </u>   
        <br/><br/>
 <b id="blink1">This Font Is Blinking</b><br/><br/>
 <b id="blink2">Color Change With Blink </b>
-</div>
 
+<br>
+ <br>
 
-<br/><br/>
-
-<br/>
-
-<br/><br/>
 <input type="checkbox" name="checkboxname" value="check1" > check1
 <input type="checkbox" name="checkboxname" value="check2"> check2
 <input type="radio" name="r" value="radio1"> radio1
 <input type="radio" name="r" value="radio2"> radio2
-
+</div>
+    </div>
 <script type="text/javascript">
 function isNumberKey(evt)
        {
@@ -179,8 +179,8 @@ if(jQuery.isNumeric(check)== false){
      var produit=a*b;
      alert("A+B="+ r +" et A*B="+ produit);
      //$("#id_sum").val(r);
-     $("#blink1").html("La somme de A = "+a + " et de B= "+ b +" est: "+r);
-     $("#blink2").html("Le produit de A =  "+a + " et de B = "+ b +" est: "+produit);
+     $("#blink1").html("SUM Of A = "+a + " & Of B= "+ b +" is: "+r);
+     $("#blink2").html("PRODUCT Of A =  "+a + " & Of B = "+ b +" is: "+produit);
      blinkFont();
      blinkColor();
      //set value to text field

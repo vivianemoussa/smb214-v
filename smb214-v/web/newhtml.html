@@ -73,8 +73,10 @@
  </div>
     
  <div id="container" style="width:1000px;">
-<div id="header" style="background-color:#FFA500;border-style: ridge">
-<h1 id="p1" style="margin-bottom:0;"></h1></div>
+     
+    <div id="header" style="background-color:#FFA500;border-style: ridge;height: 40px;">
+    <h1 id="p1" style="margin-bottom:0;"></h1>
+    </div>
 
  <div id="menu" style="background-color:#FFCC00;height:500px;width:200px;float:left;border-style: ridge">  
 <select id="single">
@@ -87,8 +89,8 @@
     <option>Multiple2</option>
     <option selected="selected">Multiple3</option>
 </select><br></br>
- 
-<button>Toggle</button>
+ <input type="button"  value="Toggle" onClick="blinkToggle()">
+
 
 <br>
 
@@ -156,9 +158,6 @@ $(document).ready(function(){
  alert("Hello Friend! Welcome to JQuery.");
 
 //Hide and Show La Phrase
-   $("button").click(function(){     
-    $('#p1').toggle();
-    });
 
 //Hide and Show Square        
   $('#id_btn').click(function(){
@@ -189,6 +188,9 @@ if(jQuery.isNumeric(check)== false){
   
 });
   
+function blinkToggle() {  
+    $('#p1').toggle();
+    };
 
 function blinkFont()
 {

@@ -9,7 +9,7 @@
     <title>val demo</title>
   <style>
     #p1 {
-        color: red;
+        color: indigo;
         margin: 4px;
         text-align:center;
         font-size: 16px;
@@ -81,7 +81,9 @@
         
     }
     
-
+    b{
+        text-decoration: underline;
+    }
   </style>
     
   
@@ -176,7 +178,7 @@ $.get('get_server_time.jsp',null,function(resp){
 function displayVals() {
   var singleValues = $( "#datepicker" ).val();
   var multipleValues = $( "#format" ).val() ;
-  $( '#p1' ).html( "<b>DATE:</b> " +  singleValues +
+  $( '#p1' ).html( "<b>DATE:</b> " +  singleValues +","+
     " <b>FORMAT:</b> " + multipleValues );
    }
 

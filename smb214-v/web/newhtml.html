@@ -1,6 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html >
 <head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
     <meta charset="utf-8">
     <title>val demo</title>
   <style>
@@ -68,6 +72,17 @@
 </head>
 
 <body style="background-color: #F5F5DC;">
+     <p>Date: <input type="text" id="datepicker" size="30" /></p>
+<p>Format options:<br />
+<select id="format">
+<option value="mm/dd/yy">Default - mm/dd/yy</option>
+<option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
+<option value="d M, y">Short - d M, y</option>
+<option value="d MM, y">Medium - d MM, y</option>
+<option value="DD, d MM, yy">Full - DD, d MM, yy</option>
+<option value="'day' d 'of' MM 'in the year' yy">With text - 'day' d 'of' MM 'in the year' yy</option>
+</select>
+</p>
  
  <div id="div2">
  </div>
@@ -122,8 +137,20 @@
 <input type="radio" name="r" value="radio1"> radio1
 <input type="radio" name="r" value="radio2"> radio2
 </div>
+
     </div>
+   
+    <script>
+$(function() {
+$( "#datepicker" ).datepicker();
+$( "#format" ).change(function() {
+$( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
+});
+});
+</script>
 <script type="text/javascript">
+
+
 function isNumberKey(evt)
        {
           var charCode = (evt.which) ? evt.which : event.keyCode
@@ -162,6 +189,11 @@ $(document).ready(function(){
 //Hide and Show Square        
   $('#id_btn').click(function(){
      $("#div1").fadeOut();
+     $( "#datepicker" ).datepicker();
+$( "#format" ).change(function() {
+$( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
+});
+
             });
             
 /*var check=$("#id_a").val();
@@ -220,6 +252,7 @@ function setblinkColor()
 
 /*<input type="button" id="id1" name="blinkFont" value="Blink Font" onClick="blinkFont()">
 <input type="button" id="id2" name="blinkColor" value="Blink Color" onClick="blinkColor()">*/
+ 
 
 </script>
 </body>

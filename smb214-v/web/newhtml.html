@@ -102,10 +102,10 @@
 
  <div id="menu" style="background-color:#FFCC00;height:500px;width:300px;float:left;border-style: ridge">  
      
-     <p style="font-weight: bold">Date: <input type="text" id="datepicker" value="Click here!!"  size="30" /></p>
+     <p style="font-weight: bold">Date: <input type="text" id="datepicker" value="Click here!!"   size="30" /></p>
 
      <p style="font-weight: bold">Format options:<br />
-<select id="format" multiple="multiple">
+<select id="format" >
 <option selected="selected" value="mm/dd/yy" >Default - mm/dd/yy</option>
 <option  value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
 <option  value="d M, y">Short - d M, y</option>
@@ -175,12 +175,12 @@ $.get('get_server_time.jsp',null,function(resp){
 //Display des valeurs dans la phrase
 function displayVals() {
   var singleValues = $( "#datepicker" ).val();
-  var multipleValues = $( "#format" ).val()|| [] ;
+  var multipleValues = $( "#format" ).val() ;
   $( '#p1' ).html( "<b>DATE:</b> " +  singleValues +
-    " <b>FORMAT:</b> " + multipleValues.join( "," ) );
+    " <b>FORMAT:</b> " + multipleValues );
    }
 
-$( "select" ).change( displayVals );
+$( "#format" ).change( displayVals );
 displayVals();
 
 $(document).ready(function(){
@@ -191,6 +191,7 @@ $(function() {
 $( "#datepicker" ).datepicker();
 $( "#format" ).change(function() {
 $( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
+displayVals();
 });
 });
 //Hide and Show La Phrase

@@ -101,28 +101,21 @@
     </div>
 
  <div id="menu" style="background-color:#FFCC00;height:500px;width:300px;float:left;border-style: ridge">  
-     <p style="font-weight: bold">Date: <input type="text" id="datepicker" value="Click here" size="30" /></p>
-<p style="font-weight: bold">Format options:<br />
-<select id="format">
-<option value="mm/dd/yy" >Default - mm/dd/yy</option>
-<option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
-<option value="d M, y">Short - d M, y</option>
-<option value="d MM, y">Medium - d MM, y</option>
-<option value="DD, d MM, yy">Full - DD, d MM, yy</option>
+     
+     <p style="font-weight: bold">Date: <input type="text" id="datepicker" value="Click here!!"  size="30" /></p>
+
+     <p style="font-weight: bold">Format options:<br />
+<select id="format" multiple="multiple">
+<option selected="selected" value="mm/dd/yy" >Default - mm/dd/yy</option>
+<option  value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
+<option  value="d M, y">Short - d M, y</option>
+<option  value="d MM, y">Medium - d MM, y</option>
+<option   value="DD, d MM, yy">Full - DD, d MM, yy</option>
 <option value="'day' d 'of' MM 'in the year' yy">With text - 'day' d 'of' MM 'in the year' yy</option>
 </select>
 </p>
 
-<select id="single">
-    <option>Single</option>
-    <option>Single2</option>
-</select>
- 
-<select id="multiple" multiple="multiple">
-    <option selected="selected">Multiple</option>
-    <option>Multiple2</option>
-    <option selected="selected">Multiple3</option>
-</select><br></br>
+<br></br>
  <input type="button" id="id_btn"  value="Toggle" onClick="blinkToggle()">
 <br><br>
 
@@ -181,10 +174,10 @@ $.get('get_server_time.jsp',null,function(resp){
 
 //Display des valeurs dans la phrase
 function displayVals() {
-  var singleValues = $( "#single" ).val();
-  var multipleValues = $( "#multiple" ).val() || [];
-  $( '#p1' ).html( "<b>Single:</b> " +  singleValues +
-    " <b>Multiple:</b> " + multipleValues.join( ", " ) );
+  var singleValues = $( "#datepicker" ).val();
+  var multipleValues = $( "#format" ).val()|| [] ;
+  $( '#p1' ).html( "<b>DATE:</b> " +  singleValues +
+    " <b>FORMAT:</b> " + multipleValues.join( "," ) );
    }
 
 $( "select" ).change( displayVals );

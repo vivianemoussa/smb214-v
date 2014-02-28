@@ -35,8 +35,8 @@
 
     }
     #div2{
-        float: right;
-	padding-right: 1px;
+       // float: right;
+	//padding-right: 1px;
 	font-size: 14px;
 	color: black;
 	font-family: Times new roman, Helvetica, sans-serif;
@@ -81,8 +81,13 @@
         
     }
     
-    b{
+    m{
         text-decoration: underline;
+         color: #CC0066;
+    }
+    #menu,body{
+        background-image: url('pix/JQuery logo.png');
+       
     }
   </style>
     
@@ -90,13 +95,13 @@
   
 </head>
 
-<body style="background-color: #F5F5DC;">
+<body style="background-color: white;">
 
     
  <div id="div2">
  </div>
     
- <div id="container" style="width:1000px;">
+ <div id="container" style="width:1000px;margin-left:  100px">
      
     <div id="header" style="background-color:#FFA500;border-style: ridge;height: 40px;">
     <h1 id="p1" style="margin-bottom:0;"></h1>
@@ -178,8 +183,8 @@ $.get('get_server_time.jsp',null,function(resp){
 function displayVals() {
   var singleValues = $( "#datepicker" ).val();
   var multipleValues = $( "#format" ).val() ;
-  $( '#p1' ).html( "<b>DATE:</b> " +  singleValues +
-    " <b>FORMAT:</b> " + multipleValues );
+  $( '#p1' ).html( "<m>DATE:</m> " +  singleValues +" ; "+
+    " <m>FORMAT:</m> " + multipleValues );
    }
 
 $( "#format" ).change( displayVals );

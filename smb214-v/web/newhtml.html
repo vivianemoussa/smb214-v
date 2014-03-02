@@ -39,7 +39,7 @@
        // float: right;
 	//padding-right: 1px;
 	font-size: 14px;
-	color: black;
+	color:#CC0066;
 	font-family: Times new roman, Helvetica, sans-serif;
 	font-weight: bold;
 	
@@ -177,7 +177,7 @@ function isNumberKey(evt)
 
 //Appel de file.jsp pour l'apparition de la date
 $.get('get_server_time.jsp',null,function(resp){
-     $("#div2").html("<b >Get Server Time</b><br><u>"+resp+"</u>");
+     $("#div2").html("Get Server Time<br><u>"+resp+"</u>");
     });
 
 //Display des valeurs dans la phrase
